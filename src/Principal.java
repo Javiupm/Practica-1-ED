@@ -15,5 +15,13 @@ public class Principal {
         a3.mostrarAsignaturas();
         a0.mostrarAlumno();
         a3.mostrarAlumno();
+
+        GrupoAlumnos g1 = new GrupoAlumnos(20, "GX11");
+        g1.insertarAlumno(a0);
+        g1.insertarAlumno(a1);
+        g1.insertarAlumno(a2);
+        g1.insertarAlumno(a3);
+        g1.mostrarGrupo();
+        g1.getAlumno(1);
     }
 }

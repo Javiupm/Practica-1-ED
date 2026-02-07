@@ -33,6 +33,10 @@ public class Alumno {
         return calificacion;
     }
 
+    public String getMatricula() {
+        return matricula;
+    }
+
     public void setCalificacion(double cal) {
         this.calificacion = cal;
     }
@@ -50,14 +54,14 @@ public class Alumno {
     public void mostrarAsignaturas(){
         if(numAisgnaturas == 0) System.out.println("No esta matriculado en ninguna asignatura");
         else {
-            System.out.println(getNumAisgnaturas() + " asignaturas: ");
+            System.out.println(getNumAisgnaturas() + " asignaturas:");
             for (int i = 0; i < numAisgnaturas; i++) {
-                System.out.println("    - " + asignaturas[i]);
+                System.out.println("- " + asignaturas[i] + ".");
             }
         }
     }
     public void mostrarAlumno(){
-        System.out.println(nombre+". "+matricula+" ("+calificacion+")");
+        System.out.println(nombre + ". Matr: " + matricula + " (" + calificacion + ")");
         mostrarAsignaturas();
     }
 }

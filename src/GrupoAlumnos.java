@@ -42,6 +42,12 @@ public class GrupoAlumnos {
         return listaAlumnos[i];
     }
     public void mostrarGrupo(){
-
+        System.out.println("GRUPO " + nombre + ": " + numAlumnos + " alumnos");
+        for (int i = 0; i < numAlumnos; i++) {
+            Alumno alumno = listaAlumnos[i];
+            if (alumno != null) {
+                alumno.mostrarAlumno();
+            }
+        }
     }
 }
