@@ -50,4 +50,29 @@ public class GrupoAlumnos {
             }
         }
     }
+    public double mediaCalificaciones(){
+        double media = 0;
+        if(numAlumnos == 0) {
+            media = -1;
+        } else {
+            double suma = 0;
+            int cuenta = 0;
+            for (int i = 0; i < numAlumnos; i++) {
+                Alumno alumno = listaAlumnos[i];
+                if (alumno != null) {
+                    suma += alumno.getCalificacion();
+                    cuenta++;
+                }
+            }
+            if (cuenta == 0) {
+                media = -1;
+            } else {
+                media = suma / cuenta;
+            }
+        }
+        return media;
+    }
+    public Alumno mejorAlumno(){
+
+    }
 }
